@@ -1,0 +1,4 @@
+create database table_first;
+create database table_second;
+DROP DATABASE IF EXISTS table_second;
+SELECT datname FROM pg_database;
