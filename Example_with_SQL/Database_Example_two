@@ -1,0 +1,8 @@
+CREATE TABLE pets
+(
+    kind_of_animal  varchar(50) NOT NULL,
+    name_of_animal  varchar(50) NOT NULL,
+    color_of_animal varchar(50) NOT NULL,
+    age_of_animal   int         NOT NULL,
+    animal_owner    varchar(50) DEFAULT 'NO OWNER'
+);
