@@ -20,6 +20,8 @@ VALUES ('Dog', 'Sparky', 'Black', 2,'Ekaterina'),
        ('Parrot', 'Gosha', 'Blue', 1,'Misha'),
        ('Duck', 'Donald', 'Brown', 2, DEFAULT),
        ('Snail', 'Faster', 'Brown', 1,'Victor');
+
 SELECT * FROM pets
 WHERE color_of_animal = 'Black';
-
+SELECT * FROM pets
+WHERE age_of_animal < 5;
