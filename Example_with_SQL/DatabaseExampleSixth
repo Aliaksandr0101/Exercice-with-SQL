@@ -1,0 +1,49 @@
+create database table_first;
+create database table_second;
+DROP DATABASE IF EXISTS table_second;
+SELECT datname
+FROM pg_database;
+CREATE TABLE pets
+(
+    kind_of_animal  varchar(50) NOT NULL,
+    name_of_animal  varchar(50) NOT NULL,
+    color_of_animal varchar(50) NOT NULL,
+    age_of_animal   int         NOT NULL,
+    animal_owner    varchar(50) DEFAULT 'NO OWNER'
+);
+INSERT INTO pets (KIND_OF_ANIMAL, NAME_OF_ANIMAL, COLOR_OF_ANIMAL, AGE_OF_ANIMAL, animal_owner)
+VALUES ('Dog', 'Sparky', 'Black', 2, 'Ekaterina'),
+       ('Cat', 'Tom', 'Black and white', 2, 'Makar'),
+       ('Сhicken', 'Clap', 'Pink', 3, 'Alex'),
+       ('Pig', 'Svipy', 'Pink', 6, DEFAULT),
+       ('Horse', 'Lucky', 'Brown', 2, 'Ekaterina'),
+       ('Sheep', 'Trinity', 'Grey', 3, DEFAULT),
+       ('Hamster', 'Orange', 'White-brown', 1, 'Anna'),
+       ('Parrot', 'Gosha', 'Blue', 1, 'Misha'),
+       ('Duck', 'Donald', 'Brown', 2, DEFAULT),
+       ('Snail', 'Faster', 'Brown', 1, 'Victor');
+
+SELECT *
+FROM pets
+WHERE color_of_animal = 'Black';
+SELECT *
+FROM pets
+WHERE age_of_animal < 5;
+
+INSERT INTO pets(kind_of_animal, name_of_animal, color_of_animal, age_of_animal, animal_owner)
+VALUES ('Snake', 'Teriky', 'White', 7, 'Victor Domnich'),
+       ('Monkey', 'Inga', 'White', 8, 'Gena'),
+       ('Turtle', 'Champion', 'White', 7, 'Irina');
+
+SELECT *
+FROM pets
+where color_of_animal = 'White'
+  and age_of_animal > 5;
+
+SELECT *
+FROM pets
+LIMIT 5;
+
+SELECT *
+FROM pets
+ORDER BY age_of_animal asc;
