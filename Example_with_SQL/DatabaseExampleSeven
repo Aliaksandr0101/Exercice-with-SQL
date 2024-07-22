@@ -48,6 +48,20 @@ SELECT *
 FROM pets
 ORDER BY age_of_animal asc;
 
+INSERT INTO pets(kind_of_animal, name_of_animal, color_of_animal, age_of_animal, animal_owner)
+VALUES ('Snake', 'Teriky', 'White', 7, 'Victor Domnich'),
+       ('Monkey', 'Inga', 'White', 8, 'Gena'),
+       ('Turtle', 'Champion', 'White', 7, 'Irina');
+
+SELECT KIND_OF_ANIMAL, NAME_OF_ANIMAL, COLOR_OF_ANIMAL, AGE_OF_ANIMAL, ANIMAL_OWNER
+FROM pets
+WHERE color_of_animal = 'Black'
+
+UNION
+
+SELECT KIND_OF_ANIMAL, NAME_OF_ANIMAL, COLOR_OF_ANIMAL, AGE_OF_ANIMAL, ANIMAL_OWNER
+FROM pets
+WHERE age_of_animal > 1;
 
 
 
