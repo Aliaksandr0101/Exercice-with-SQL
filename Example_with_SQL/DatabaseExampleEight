@@ -46,7 +46,7 @@ LIMIT 5;
 
 SELECT *
 FROM pets
-ORDER BY age_of_animal;
+ORDER BY age_of_animal asc;
 
 INSERT INTO pets(kind_of_animal, name_of_animal, color_of_animal, age_of_animal, animal_owner)
 VALUES ('Snake', 'Teriky', 'White', 7, 'Victor Domnich'),
@@ -62,6 +62,14 @@ UNION
 SELECT KIND_OF_ANIMAL, NAME_OF_ANIMAL, COLOR_OF_ANIMAL, AGE_OF_ANIMAL, ANIMAL_OWNER
 FROM pets
 WHERE age_of_animal > 1;
+
+SELECT kind_of_animal  AS kindOfAnimal,
+       name_of_animal  AS nameOfAnimal,
+       color_of_animal AS colorOfnimal,
+       age_of_animal   AS ageOfAnimal,
+       animal_owner    AS animalOfOwner
+FROM pets
+WHERE animal_owner = 'NO OWNER';
 
 
 
