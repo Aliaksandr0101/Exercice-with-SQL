@@ -7,5 +7,6 @@ public class ExampleOne {
         System.out.println("Hello");
         System.out.println("Break a lag");
         System.out.println("Bless you");
+        System.out.println("Bless you");
     }
 }
