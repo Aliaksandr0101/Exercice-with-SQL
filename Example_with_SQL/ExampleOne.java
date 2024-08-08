@@ -12,5 +12,6 @@ public class ExampleOne {
         System.out.println("Bless you");
         System.out.println("Bless you");
         System.out.println("We are people");
+        System.out.println("We are people");
     }
 }
