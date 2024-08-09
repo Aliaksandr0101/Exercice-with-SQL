@@ -1,0 +1,13 @@
+CREATE TABLE IF NOT EXISTS phones
+(
+    id           SERIAL PRIMARY KEY,
+    user_id      INT         NOT NULL,
+    phone_number VARCHAR(10) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS rooms
+(
+    id           SERIAL PRIMARY KEY,
+    phone_number INT NOT NULL,
+    room_number  INT NOT NULL
+);
