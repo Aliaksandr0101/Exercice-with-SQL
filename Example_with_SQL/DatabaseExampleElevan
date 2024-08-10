@@ -8,6 +8,27 @@ CREATE TABLE IF NOT EXISTS phones
 CREATE TABLE IF NOT EXISTS rooms
 (
     id           SERIAL PRIMARY KEY,
-    phone_number INT NOT NULL,
+    phone_id INT NOT NULL,
     room_number  INT NOT NULL
 );
+
+INSERT INTO phones (id, user_id, phone_number)
+VALUES (1, 101, '0123456789'),
+       (2, 102, '0987654321'),
+       (3, 103, '1234567890'),
+       (4, 104, '0654321098'),
+       (5, 105, '0765432109');
+
+INSERT INTO rooms (id, phone_id, room_number)
+VALUES (1, 1, 784),
+       (2, 2, 108),
+       (3, 3, 35),
+       (4, 4, 74),
+       (5, 5, 84);
+
+SELECT * FROM phones
+WHERE phone_number LIKE '0%'
+ORDER BY phone_number;
+SELECT * FROM phones
+WHERE id > 2
+  AND user_id > 1;
