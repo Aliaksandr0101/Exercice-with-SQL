@@ -8,8 +8,6 @@ public class ExampleOne {
         System.out.println("Break a lag");
         System.out.println("Bless you");
         System.out.println("We are people");
-        System.out.println("We are people");
-        System.out.println("We are people");
         for (int i = 3; i < 9; i++) {
             System.out.println(" i = " + i);}
     }
