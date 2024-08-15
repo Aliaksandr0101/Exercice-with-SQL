@@ -8,7 +8,7 @@ public class ExampleOne {
         System.out.println("Break a lag");
         System.out.println("Bless you");
         System.out.println("We are people");
-        System.out.println("We are people");
+        System.out.println("We are animals");
         for (int i = 3; i < 9; i++) {
             System.out.println("at the moment i = " + i);}
     }
